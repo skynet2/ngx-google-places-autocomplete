@@ -1,6 +1,6 @@
 {
   "name": "ngx-google-places-autocomplete",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "scripts": {
     "start": "tsc -p example && tsc -p src && concurrently \"tsc -p example -w\" \"tsc -p src -w\" \"lite-server --config sync-bs-config.json\" ",
     "yarn": "yarn",
@@ -8,8 +8,8 @@
     "clean": "yarn run rimraf -- compiled && yarn run rimraf -- dist"
   },
   "license": "MIT",
-  "typings": "dist/build/ngx-google-places-autocomplete.d.ts",
-  "main": "dist/ngx-google-places-autocomplete.umd.js",
+  "typings": "ngx-google-places-autocomplete.d.ts",
+  "main": "bundles/ngx-google-places-autocomplete.umd.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/skynet2/ngx-google-places-autocomplete"
@@ -27,26 +27,19 @@
   "contributors": [
     {
       "name": "Stas Dmytryshyn",
-      "email": "iqpirat@gmail.com",
       "url": "https://github.com/skynet2/ngx-google-places-autocomplete"
-    },
-    {
-      "name": "Andrey Podvalniy"
     }
   ],
   "peerDependencies": {
-    "@angular/common": ">= 5.0.0",
-    "@angular/core": ">= 5.0.0",
-    "@angular/router": ">= 5.0.0"
+    "@angular/core": ">= 4.0.0"
   },
   "devDependencies": {
-    "@angular/common": "5.0.0",
-    "@angular/compiler": "5.0.0",
-    "@angular/compiler-cli": "5.0.0",
-    "@angular/core": "5.0.0",
-    "@angular/platform-browser": "5.0.0",
-    "@angular/platform-browser-dynamic": "5.0.0",
-    "@angular/router": "5.0.0",
+    "@angular/common": "4.0.0",
+    "@angular/core" : "4.0.0",
+    "@angular/compiler": "4.0.0",
+    "@angular/compiler-cli": "4.0.0",
+    "@angular/platform-browser": "4.0.0",
+    "@angular/platform-browser-dynamic": "4.0.0",
     "systemjs": "0.19.40",
     "core-js": "^2.4.1",
     "rxjs": "^5.5.3",
@@ -59,6 +52,7 @@
     "webpack": "^3.9.1",
     "rimraf": "^2.6.2",
     "@ngtools/webpack": "^1.8.5",
-    "rollup": "0.41.4"
+    "rollup": "0.41.4",
+    "rollup-plugin-copy" : "0.2.3"
   }
 }

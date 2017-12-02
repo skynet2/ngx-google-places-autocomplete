@@ -5,7 +5,7 @@
     "experimentalDecorators": true,
     "module": "es2015",
     "moduleResolution": "node",
-    "outDir": "../dist/build",
+    "outDir": "../dist",
     "rootDir": ".",
     "sourceMap": true,
     "inlineSources": true,
