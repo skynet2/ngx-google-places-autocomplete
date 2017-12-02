@@ -1,4 +1,0 @@
-**/*.js
-**/*.json
-**/*.map
-!bundles/*.js
