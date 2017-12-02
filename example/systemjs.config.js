@@ -21,7 +21,8 @@
             '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
             '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
             '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
-            'ngx-google-places-autocomplete': 'dist/ngx-google-places-autocomplete.umd.js',
+           // 'ngx-google-places-autocomplete': 'dist/ngx-google-places-autocomplete.umd.js',
+            'ngx-google-places-autocomplete' : 'src',
             // other libraries
             'rxjs': 'npm:rxjs'
         },
@@ -33,6 +34,9 @@
             },
             rxjs: {
                 defaultExtension: 'js'
+            },
+            'ngx-google-places-autocomplete' : {
+                defaultExtension : 'js'
             }
         }
     });

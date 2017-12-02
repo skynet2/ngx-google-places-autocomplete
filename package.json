@@ -4,10 +4,11 @@
   "scripts": {
     "start": "tsc -p example && tsc -p src && concurrently \"tsc -p example -w\" \"tsc -p src -w\" \"lite-server --config sync-bs-config.json\" ",
     "yarn": "yarn",
-    "build": "yarn run clean && ngc -p src/tsconfig.webpack.json && rollup -c rollup.config.js && yarn run rimraf -- dist/build",
+    "build": "yarn run clean && ngc -p src/tsconfig.webpack.json && rollup -c rollup.config.js",
     "clean": "yarn run rimraf -- compiled && yarn run rimraf -- dist"
   },
   "license": "MIT",
+  "typings": "dist/build/ngx-google-places-autocomplete.d.ts",
   "main": "dist/ngx-google-places-autocomplete.umd.js",
   "repository": {
     "type": "git",

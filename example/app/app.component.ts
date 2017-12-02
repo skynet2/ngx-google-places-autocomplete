@@ -4,7 +4,7 @@ import { ComponentRestrictions } from "../../src/objects/options/componentRestri
 
 @Component({
     selector: 'my-app',
-    template: `<input ngx-google-places-autocomplete #places="ngx-places"/><button (click)="changeConfig()"></button>`,
+    template: `<input ngx-google-places-autocomplete #places="ngx-places"/><button (click)="changeConfig()">Change Config</button><button (click)="search()">Execute search</button>`,
 })
 export class AppComponent {
     @ViewChild('places') places: GooglePlaceDirective;
