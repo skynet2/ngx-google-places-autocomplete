@@ -8,6 +8,31 @@
     "clean": "yarn run rimraf -- compiled && yarn run rimraf -- dist"
   },
   "license": "MIT",
+  "main": "dist/ngx-google-places-autocomplete.umd.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skynet2/ngx-google-places-autocomplete"
+  },
+  "bugs": {
+    "url": "https://github.com/skynet2/ngx-google-places-autocomplete/issues"
+  },
+  "homepage": "https://github.com/skynet2/ngx-google-places-autocomplete",
+  "keywords": [
+    "autocomplete",
+    "google places",
+    "angular 5",
+    "angular"
+  ],
+  "contributors": [
+    {
+      "name": "Stas Dmytryshyn",
+      "email": "iqpirat@gmail.com",
+      "url": "https://github.com/skynet2/ngx-google-places-autocomplete"
+    },
+    {
+      "name": "Andrey Podvalniy"
+    }
+  ],
   "peerDependencies": {
     "@angular/common": ">= 5.0.0",
     "@angular/core": ">= 5.0.0",
