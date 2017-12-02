@@ -1,0 +1,10 @@
+{
+  "ui": false,
+  "codeSync": false,
+  "server": {
+    "baseDir": [
+      "./example",
+      "./"
+    ]
+  }
+}
