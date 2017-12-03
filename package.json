@@ -1,6 +1,6 @@
 {
   "name": "ngx-google-places-autocomplete",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "scripts": {
     "start": "tsc -p example && tsc -p src && concurrently \"tsc -p example -w\" \"tsc -p src -w\" \"lite-server --config sync-bs-config.json\" ",
     "yarn": "yarn",
@@ -22,6 +22,8 @@
     "autocomplete",
     "google places",
     "angular 5",
+    "angular 2",
+    "angular 4",
     "angular"
   ],
   "contributors": [

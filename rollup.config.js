@@ -14,10 +14,13 @@ export default {
         '@angular/core': 'ng.core'
     },
     plugins: [
-    copy(
-    {"package.json":"dist/package.json",
-    ".npmignore":"dist/.npmignore"}
-    )
+        copy(
+            {
+                "package.json": "dist/package.json",
+                ".npmignore": "dist/.npmignore",
+                "README.md": "dist/README.md"
+            }
+        )
     ],
-    onwarn: () => { return }
+    onwarn: () => {return}
 }
