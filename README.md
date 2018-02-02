@@ -1,8 +1,6 @@
 # ngx-google-places-autocomplete
 This module is a wrapper for Google Places Autocomplete js library.
 
-ngx-google-places-autocomplete is a replacement for https://github.com/psykolm22/ng2-google-place-autocomplete but with correct dependencies and support for angular 5.
-
 [![NPM](https://nodei.co/npm/ngx-google-places-autocomplete.png)](https://nodei.co/npm/ngx-google-places-autocomplete/)
 
 # Installation
