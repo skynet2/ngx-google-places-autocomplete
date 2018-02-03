@@ -1,8 +1,8 @@
-import { Viewport } from "../viewport";
+import { LatLngBounds } from "../latLngBounds";
 import { ComponentRestrictions } from "./componentRestrictions";
 
 export class Options {
-    public bounds: Viewport;
+    public bounds: LatLngBounds;
     public componentRestrictions: ComponentRestrictions;
     public types: string[];
 

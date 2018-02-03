@@ -1,7 +1,7 @@
-import { Viewport } from "./viewport";
-import { Location } from "./location";
+import { LatLngBounds } from "./latLngBounds";
+import { LatLng } from "./latLng";
 
 export interface Geometry {
-    location: Location;
-    viewport: Viewport;
+    location: LatLng;
+    viewport: LatLngBounds;
 }

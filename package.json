@@ -1,6 +1,6 @@
 {
   "name": "ngx-google-places-autocomplete",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "scripts": {
     "start": "tsc -p example && tsc -p src && concurrently \"tsc -p example -w\" \"tsc -p src -w\" \"lite-server --config sync-bs-config.json\" ",
     "yarn": "yarn",
@@ -33,11 +33,11 @@
     }
   ],
   "peerDependencies": {
-    "@angular/core": ">= 4.0.0"
+    "@angular/core": ">= 2.0.0"
   },
   "devDependencies": {
     "@angular/common": "4.0.0",
-    "@angular/core" : "4.0.0",
+    "@angular/core": "4.0.0",
     "@angular/compiler": "4.0.0",
     "@angular/compiler-cli": "4.0.0",
     "@angular/platform-browser": "4.0.0",
@@ -55,6 +55,6 @@
     "rimraf": "^2.6.2",
     "@ngtools/webpack": "^1.8.5",
     "rollup": "0.41.4",
-    "rollup-plugin-copy" : "0.2.3"
+    "rollup-plugin-copy": "0.2.3"
   }
 }
