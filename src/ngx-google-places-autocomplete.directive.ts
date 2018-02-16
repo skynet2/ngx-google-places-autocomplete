@@ -45,9 +45,11 @@ export class GooglePlaceDirective implements AfterViewInit {
         if (!this.autocomplete)
             throw new Error("Autocomplete is not initialized");
 
-        this.eventListener = this.autocomplete.addListener('place_changed', () => {
-            this.handleChangeEvent()
-        });
+        if (!this.autocomplete.addListener != null) { // Check to bypass https://github.com/angular-ui/angular-google-maps/issues/270
+            this.eventListener = this.autocomplete.addListener('place_changed', () => {
+                this.handleChangeEvent()
+            });
+        }
     }
 
     public reset(): void {
