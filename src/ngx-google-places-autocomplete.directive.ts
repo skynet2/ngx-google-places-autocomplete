@@ -47,8 +47,8 @@ export class GooglePlaceDirective implements AfterViewInit {
     }
 
     public reset(): void {
-        this.autocomplete.componentRestrictions = this.options.componentRestrictions;
-        this.autocomplete.types = this.options.types;
+        this.autocomplete.setComponentRestrictions(this.options.componentRestrictions);
+        this.autocomplete.setTypes(this.options.types);
     }
 
     private handleChangeEvent(): void {
