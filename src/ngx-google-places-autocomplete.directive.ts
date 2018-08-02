@@ -31,12 +31,6 @@ export class GooglePlaceDirective implements AfterViewInit {
     }
 
     private initialize(): void {
-        if (this.autocomplete != null) {
-            google.maps.event.trigger(this.autocomplete, 'remove');
-            this.autocomplete = null;
-            this.eventListener = null;
-        }
-
         if (!this.isGoogleLibExists())
             throw new Error("Google maps library can not be found");
 
@@ -53,7 +47,8 @@ export class GooglePlaceDirective implements AfterViewInit {
     }
 
     public reset(): void {
-        this.initialize();
+        this.autocomplete.componentRestrictions = this.options.componentRestrictions;
+        this.autocomplete.types = this.options.types;
     }
 
     private handleChangeEvent(): void {
