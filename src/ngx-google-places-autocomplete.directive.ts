@@ -1,6 +1,6 @@
-import { AfterViewInit, Directive, ElementRef, EventEmitter, Input, NgZone, Output } from "@angular/core";
-import { Address } from "./objects/address";
-import { Options } from "./objects/options/options";
+import {AfterViewInit, Directive, ElementRef, EventEmitter, Input, NgZone, Output} from "@angular/core";
+import {Address} from "./objects/address";
+import {Options} from "./objects/options/options";
 
 declare let google: any;
 
@@ -43,6 +43,30 @@ export class GooglePlaceDirective implements AfterViewInit {
             this.eventListener = this.autocomplete.addListener('place_changed', () => {
                 this.handleChangeEvent()
             });
+
+        }
+
+        // according to https://gist.github.com/schoenobates/ef578a02ac8ab6726487
+        if (window && window.navigator && window.navigator.userAgent && navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+            setTimeout(() => {
+                let containers = document.getElementsByClassName('pac-container');
+
+                if (containers) {
+                    let arr = Array.from(containers);
+
+                    if (arr) {
+                        for (let container of arr) {
+                            if (!container)
+                                continue;
+
+                            container.addEventListener('touchend', function (e) {
+                                e.stopImmediatePropagation();
+                            });
+                        }
+
+                    }
+                }
+            }, 500);
         }
     }
 
