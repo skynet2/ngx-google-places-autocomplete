@@ -43,8 +43,16 @@ export class GooglePlaceDirective implements AfterViewInit {
             this.eventListener = this.autocomplete.addListener('place_changed', () => {
                 this.handleChangeEvent()
             });
-
         }
+
+        this.el.nativeElement.addEventListener('keydown', (event: KeyboardEvent) => {
+            let key = event.key.toLowerCase();
+
+            if (key == 'enter' && event.target === this.el.nativeElement) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+        });
 
         // according to https://gist.github.com/schoenobates/ef578a02ac8ab6726487
         if (window && window.navigator && window.navigator.userAgent && navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
@@ -59,7 +67,7 @@ export class GooglePlaceDirective implements AfterViewInit {
                             if (!container)
                                 continue;
 
-                            container.addEventListener('touchend', function (e) {
+                            container.addEventListener('touchend', (e) => {
                                 e.stopImmediatePropagation();
                             });
                         }
