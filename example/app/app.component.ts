@@ -5,14 +5,17 @@ import { Address } from "../../src/objects/address";
 
 @Component({
     selector: 'my-app',
-    template: `<input ngx-google-places-autocomplete #places="ngx-places" (onAddressChange)="onChange($event)" />
+    template: `<form><input ngx-google-places-autocomplete #places="ngx-places" (onAddressChange)="onChange($event)" />
     <button (click)="changeConfig()">Change Config</button>
-    <button (click)="search()">Execute search</button>`,
+    <button (click)="search()">Execute search</button></form>`,
 })
 export class AppComponent {
     @ViewChild('places') places: GooglePlaceDirective;
 
     public onChange(address: Address) {
+        if(address.photos && address.photos.length > 0){
+            console.dir(address.photos[0].getUrl({maxHeight:500,maxWidth:500}));
+        }
         console.log(address.geometry.location.lng());
         console.log(address.geometry.location.lat());
         console.log(address.geometry.location.toJSON());
