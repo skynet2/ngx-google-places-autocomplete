@@ -15,7 +15,7 @@ yarn add ngx-google-places-autocomplete
 # Integration
 1. Add google library in your index.html file : 
 ```
-    <script src="https://maps.googleapis.com/maps/api/js?key=<Your API KEY>&libraries=places&sensor=false&language=en"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<Your API KEY>&libraries=places&language=en"></script>
 ```
 2. Replace <You API KEY> with google places api key. Ref - https://developers.google.com/places/web-service/get-api-key
 
