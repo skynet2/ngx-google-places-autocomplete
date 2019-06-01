@@ -42,6 +42,9 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     }
 ```
 
+# Angular Universal
+In order to use under angular universal please check that comment https://github.com/skynet2/ngx-google-places-autocomplete/issues/15#issuecomment-465371214
+
 ## Options
 Refer to original google maps api - https://developers.google.com/maps/documentation/javascript/places-autocomplete
 Options object - https://github.com/skynet2/ngx-google-places-autocomplete/blob/master/src/objects/options/options.ts
