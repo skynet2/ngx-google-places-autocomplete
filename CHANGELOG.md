@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/skynet2/ngx-google-places-autocomplete/compare/2.0.3...2.0.4) (2019-06-02)
+
+### Bug Fixes
+
+* Early-exit if no keydown event key exists ([#35](https://github.com/skynet2/ngx-google-places-autocomplete/pull/35))
+* Added fields property ([#36](https://github.com/skynet2/ngx-google-places-autocomplete/issues/36))
+
 ## [2.0.3](https://github.com/skynet2/ngx-google-places-autocomplete/compare/2.0.2...2.0.3) (2018-12-11)
 
 ### Bug Fixes
