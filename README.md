@@ -45,7 +45,7 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 ## Options
 Refer to original google maps api - https://developers.google.com/maps/documentation/javascript/places-autocomplete
 Options object - https://github.com/skynet2/ngx-google-places-autocomplete/blob/master/src/objects/options/options.ts
-
+Google doc for Options : https://developers.google.com/maps/documentation/javascript/reference/places-widget#AutocompleteOptions
 Example : 
 ```html  
 [options]="{
