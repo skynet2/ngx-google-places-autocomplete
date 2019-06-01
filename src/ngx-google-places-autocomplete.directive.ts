@@ -46,6 +46,10 @@ export class GooglePlaceDirective implements AfterViewInit {
         }
 
         this.el.nativeElement.addEventListener('keydown', (event: KeyboardEvent) => {
+            if(!event.key) {
+                return;
+            }
+
             let key = event.key.toLowerCase();
 
             if (key == 'enter' && event.target === this.el.nativeElement) {
