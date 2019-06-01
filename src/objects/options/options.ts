@@ -5,6 +5,8 @@ export class Options {
     public bounds: LatLngBounds;
     public componentRestrictions: ComponentRestrictions;
     public types: string[];
+    public fields: string[];
+    public strictBounds: boolean;
 
     public constructor(opt?: Partial<Options>) {
         if (!opt)
