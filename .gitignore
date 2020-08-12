@@ -1,3 +1,4 @@
+.DS_Store
 node_modules/
 typings/
 src/**/*.js
@@ -8,3 +9,4 @@ example/**/*.map
 dist/
 build.zip
 publish_release_github.js
+package-lock.json

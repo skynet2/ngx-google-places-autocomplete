@@ -1,2 +1,5 @@
 **/*.map
 !bundles/*.js
+package-lock.json
+*.tgz
+dist

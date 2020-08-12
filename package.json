@@ -1,16 +1,25 @@
 {
   "name": "ngx-google-places-autocomplete",
-  "version": "2.0.4",
+  "version": "3.0.0",
   "scripts": {
     "start": "tsc -p example && tsc -p src && concurrently \"tsc -p example -w\" \"tsc -p src -w\" \"lite-server --config sync-bs-config.json\" ",
     "yarn": "yarn",
+    "build.angular": "ng-packagr -p package.json",
     "build": "yarn run clean && ngc -p src/tsconfig.webpack.json && rollup -c rollup.config.js",
     "clean": "yarn run rimraf -- compiled && yarn run rimraf -- dist && yarn run rimraf -- github",
-    "github:release" : "yarn run bestzip build.zip ./dist/* && node publish_release_github.js"
+    "github:release": "yarn run bestzip build.zip ./dist/* && node publish_release_github.js"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/index.ts"
+    },
+    "whitelistedNonPeerDependencies": [
+      "."
+    ]
   },
   "license": "MIT",
-  "typings": "ngx-google-places-autocomplete.d.ts",
-  "main": "bundles/ngx-google-places-autocomplete.umd.js",
+  "typings": "index.d.ts",
+  "main": "bundles/index.umd.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/skynet2/ngx-google-places-autocomplete"
@@ -37,30 +46,31 @@
     }
   ],
   "peerDependencies": {
-    "@angular/core": ">= 2.0.0"
+    "@angular/core": ">= 10.0.0"
   },
   "devDependencies": {
-    "@angular/common": "4.0.0",
-    "@angular/core": "4.0.0",
-    "@angular/compiler": "4.0.0",
-    "@angular/compiler-cli": "4.0.0",
-    "@angular/platform-browser": "4.0.0",
-    "@angular/platform-browser-dynamic": "4.0.0",
-    "systemjs": "0.19.40",
-    "core-js": "^2.4.1",
-    "rxjs": "^5.5.3",
-    "zone.js": "^0.8.4",
-    "@types/node": "7.0.5",
-    "typescript": "2.4.2",
-    "concurrently": "^3.5.1",
-    "lite-server": "^2.3.0",
-    "element-closest": "^2.0.2",
-    "webpack": "^3.9.1",
-    "rimraf": "^2.6.2",
-    "@ngtools/webpack": "^1.8.5",
-    "rollup": "0.41.4",
-    "rollup-plugin-copy": "0.2.3",
-    "bestzip" : "^1.1.4",
-    "publish-release" : "^1.4.0"
+    "@angular/common": "~10.0.0",
+    "@angular/core": "~10.0.0",
+    "@angular/compiler": "~10.0.0",
+    "@angular/compiler-cli": "~10.0.0",
+    "@angular/platform-browser": "~10.0.0",
+    "@angular/platform-browser-dynamic": "~10.0.0",
+    "systemjs": "6.5.0",
+    "core-js": "^3.6.5",
+    "rxjs": "^6.5.0",
+    "zone.js": "^0.10.3",
+    "ng-packagr": "~10.0.0",
+    "@types/node": "~12.0.0",
+    "typescript": "~3.9.0",
+    "concurrently": "^5.3.0",
+    "lite-server": "^2.5.4",
+    "element-closest": "^3.0.2",
+    "webpack": "^4.44.1",
+    "rimraf": "^3.0.2",
+    "@ngtools/webpack": "~10.0.0",
+    "rollup": "~2.23.1",
+    "rollup-plugin-copy": "~3.3.0",
+    "bestzip": "^2.1.6",
+    "publish-release": "^1.6.1"
   }
 }
