@@ -1,3 +1,11 @@
+## [2.0.5](https://github.com/skynet2/ngx-google-places-autocomplete/compare/2.0.4...2.0.5) (2020-03-11)
+
+### Bug Fixes
+
+* Place should be returned even if place_id is missing when selecting specific fields ([#47](https://github.com/skynet2/ngx-google-places-autocomplete/pull/47))
+* Add origin field to Google Autocomplete constructor option type ([#51](https://github.com/skynet2/ngx-google-places-autocomplete/pull/51))
+
+
 ## [2.0.4](https://github.com/skynet2/ngx-google-places-autocomplete/compare/2.0.3...2.0.4) (2019-06-02)
 
 ### Bug Fixes
