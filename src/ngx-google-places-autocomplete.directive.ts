@@ -91,7 +91,7 @@ export class GooglePlaceDirective implements AfterViewInit {
         this.ngZone.run(() => {
             this.place = this.autocomplete.getPlace();
 
-            if (this.place && this.place.place_id) {
+            if (this.place) {
                 this.onAddressChange.emit(this.place);
             }
         });
