@@ -60,7 +60,7 @@
     "@ngtools/webpack": "^1.8.5",
     "rollup": "0.41.4",
     "rollup-plugin-copy": "0.2.3",
-    "bestzip" : "^1.1.4",
+    "bestzip" : "^2.1.7",
     "publish-release" : "^1.4.0"
   }
 }
