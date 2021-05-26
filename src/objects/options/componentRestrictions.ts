@@ -1,5 +1,5 @@
 export class ComponentRestrictions {
-    public country: string;
+    public country: string | string[];
 
     constructor(obj?: Partial<ComponentRestrictions>) {
         if (!obj)
